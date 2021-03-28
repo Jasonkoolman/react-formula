@@ -1,0 +1,168 @@
+:root {
+  --color-primary: #{$color-primary};
+  --color-base: #{$color-base};
+  --color-heading: $color-heading;
+  --color-positive: $color-positive;
+  --color-negative: $color-negative;
+  --color-warning: $color-warning;
+  --color-info: $color-info;
+
+  --font-family-base: inspect($font-family-base);
+  --font-family-heading: $font-family-heading;
+
+  @each $size, $breakpoint in $grid-breakpoints {
+    --breakpoint-#{$size}: $breakpoint;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  font-size: $font-size-base;
+  font-family: $font-family-base;
+  line-height: $line-height-base;
+  color: $color-base;
+}
+
+body {
+  background-color: $color-bg;
+}
+
+.fade-enter {
+  opacity: 0;
+  z-index: 1;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 250ms ease-in;
+}
+
+// .page-transition-group {
+//   position: relative;
+// }
+// .page-transition-inner {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+// }
+
+#app {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-container {
+  flex: 1 0 auto;
+}
+
+.app-title {
+  display: flex;
+  font-size: 38px;
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  justify-content: center;
+  margin-top: 64px;
+  margin-bottom: 16px;
+
+  svg {
+    margin-right: 16px;
+  }
+  span {
+    color: $color-primary;
+  }
+}
+
+form {
+  display: block;
+  padding: 30px;
+  border-bottom: 2px dashed #ddd;
+}
+
+.basic-form input {
+  display: block;
+  margin-bottom: 15px;
+
+  &[type="submit"] {
+    margin-top: 15px;
+  }
+  &.control-check-input {
+    margin-bottom: 0;
+  }
+}
+
+.control-input {
+  display: block;
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #1d1f21;
+  background-color: #fff;
+  border: 1px solid #fff;
+  border-radius: 3px;
+}
+
+.control-error {
+  border-color: $color-negative;
+}
+
+button {
+  text-align: center;
+  white-space: nowrap;
+  padding: 8px 16px;
+  line-height: 1.5;
+  border-radius: 4px;
+  border-width: 0;
+  color: #fff;
+  background-color: $color-primary;
+  cursor: pointer;
+}
+
+.field-container {
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.field-label {
+  display: block;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.field-info {
+  display: block;
+  font-size: 14px;
+  margin-top: 6px;
+  margin-bottom: 0;
+  color: #b0b6bf;
+}
+
+.field-error {
+  color: $color-negative;
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+.control-check {
+  display: flex;
+  align-items: center;
+  padding: 1px 0;
+  cursor: pointer;
+
+  input {
+    width: auto;
+    margin-right: 8px;
+  }
+}

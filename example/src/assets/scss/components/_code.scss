@@ -1,0 +1,56 @@
+code,
+pre {
+  font-family: Menlo, Monaco, monospace;
+  font-size: 14px;
+  color: #fff;
+}
+
+pre {
+  tab-size: 2;
+  hyphens: none;
+  white-space: pre;
+  word-wrap: normal;
+  text-shadow: none;
+}
+
+$punctuation: rgba(255, 255, 255, 0.7);
+$name: #a3c3f9;
+$value: #fff;
+$className: #ff66a0;
+$primitive: #51c355;
+
+$boolean: $primitive;
+$string: $primitive;
+$number: $primitive;
+
+$boolean: #63a9e4;
+$number: #a096f7;
+$string: #7cb95d;
+
+// Syntax highlighting using Prism
+.prismjs {
+  .token.punctuation {
+    color: $punctuation;
+  }
+  .token.parameter {
+    color: #fff;
+  }
+  .token.attr-name {
+    color: $name;
+  }
+  .token.attr-value {
+    color: $value;
+  }
+  .token.boolean {
+    color: $boolean;
+  }
+  .token.string {
+    color: $string;
+  }
+  .token.number {
+    color: $number;
+  }
+  .token.class-name {
+    color: $className;
+  }
+}

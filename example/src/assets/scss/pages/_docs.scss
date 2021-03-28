@@ -1,0 +1,17 @@
+.docs-page {
+  display: flex;
+}
+.docs-sidebar {
+  width: 250px;
+  min-height: calc(100vh - 56px);
+  background: #0c1a31;
+  border-right: 1px solid rgba(255, 255, 255, 0.04);
+}
+.docs-container {
+  flex: 1;
+  padding: 48px 64px;
+
+  section {
+    margin-bottom: 36px;
+  }
+}

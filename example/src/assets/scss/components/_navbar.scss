@@ -1,0 +1,39 @@
+.app-navbar {
+  display: flex;
+  align-items: center;
+  height: 56px;
+  padding: 0 16px;
+  background-color: $color-bg-light;
+  border-bottom: 1px solid lighten($color-bg-light, 4%);
+}
+
+.app-navbar-logo {
+  margin-right: 20px;
+}
+
+.app-navbar-menu {
+  display: inline-flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    margin-right: 20px;
+  }
+
+  a {
+    display: inline-block;
+    padding: 2px 0;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    margin-bottom: -1px;
+    color: #fff;
+
+    &[aria-current] {
+      border-bottom-color: var(--color-primary);
+    }
+    &:hover {
+      color: var(--color-primary);
+    }
+  }
+}
